@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diyabet Tahmini</title>
+</head>
+<body>
+<h1>Diyabet Tahmini Uygulaması</h1>
+<h2>örnek veri: 7,147,173,36,0,33.5,0.63,50 </h2>
+<form action="/" method="post">
+Pregnancies: <input type="number" name="Pregnancies" required><br><br>
+Glucose: <input type="number" name="Glucose" required><br><br>
+BloodPressure: <input type="number" name="BloodPressure" required><br><br>
+SkinThickness: <input type="number" name="SkinThickness" required><br><br>
+Insulin: <input type="number" name="Insulin" required><br><br>
+BMI: <input type="number" name="BMI" step="0.01" required><br><br>
+DiabetesPedigreeFunction: <input type="number" name="DiabetesPedigreeFunction" step="0.01" required><br><br>
+Age: <input type="number" name="Age" required><br><br>
+<input type="submit" value="Tahmin Et">
+</form>
+
+{% if tahmin %} 
+<h2>{{ tahmin }}</h2>
+{% endif %}
+</body>
+</html>
